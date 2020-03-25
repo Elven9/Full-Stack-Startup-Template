@@ -1,0 +1,11 @@
+@import '../style/global.scss';
+
+.container {
+  width: 100%;
+}
+
+@media only screen and (min-width: $max-app-container-width + 1) {
+  .container {
+    height: 100%;
+  }
+}

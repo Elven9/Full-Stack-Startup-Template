@@ -1,0 +1,28 @@
+@import '../style/global.scss';
+
+.container {
+  width: 100%;
+  background-color: $semi-dark-background;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 30px 15px 30px 20px;
+    color: white;
+    font-size: 28px;
+  }
+
+  .bottom-navigation {
+    background-color: $semi-dark-background;
+
+    // Override Material-UI BottomNavigation Default Style
+    .custom-root {
+      color: white;
+    }
+
+    .custom-selected {
+      color: $main-red;
+      background-color: $dark-red;
+    }
+  }
+}

@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.scss';
 
-import InfoPanel from './layout/InfoPanel'
+// Components
+import Navigation from './layout/Navigation'
+import RouteContainer from './layout/RouteContainer'
 
 function App() {
   return (
     <div className="App">
-      <InfoPanel />
+      <Navigation />
+      <RouteContainer />
     </div>
   );
 }
