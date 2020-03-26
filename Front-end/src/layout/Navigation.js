@@ -6,9 +6,8 @@ import { useHistory } from 'react-router-dom'
 // Material UI
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
-import RestoreIcon from '@material-ui/icons/Restore'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import LocationOnIcon from '@material-ui/icons/LocationOn'
+import RestaurantIcon from '@material-ui/icons/Restaurant'
+import AssessmentIcon from '@material-ui/icons/Assessment'
 
 // Redux
 import { connect } from 'react-redux'
@@ -30,11 +29,10 @@ function Navigation({ path, onChange }) {
           history.push(newValue)
         }}
         showLabels
-        className={styles["bottom-navigation"]}
+        classes={{root: styles["bottom-navigation"]}}
       >
-        <BottomNavigationAction classes={{selected: styles["custom-selected"], root: styles["custom-root"]}} label="Recents" value="/" icon={<RestoreIcon />} />
-        <BottomNavigationAction classes={{selected: styles["custom-selected"], root: styles["custom-root"]}} label="Favorites" value="/Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction classes={{selected: styles["custom-selected"], root: styles["custom-root"]}} label="Nearby" value="/Nearby" icon={<LocationOnIcon />} />
+        <BottomNavigationAction classes={{selected: styles["custom-selected"], root: styles["custom-root"]}} label="現在營業餐廳" value="/restaurant" icon={<RestaurantIcon />} />
+        <BottomNavigationAction classes={{selected: styles["custom-selected"], root: styles["custom-root"]}} label="餐廳管理系統" value="/dashboard" icon={<AssessmentIcon />} />
       </BottomNavigation>
     </div>
   )
