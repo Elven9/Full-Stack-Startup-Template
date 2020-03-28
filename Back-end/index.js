@@ -10,6 +10,9 @@ const port = 9000
 // Mount Router
 app.use('/restaurant', Restaurant)
 
+// Health Check Route
+app.get('/healthCheck', (req, res) => { res.send("OK") })
+
 // Error Handler
 app.use(function (err, req, res, next) {
   console.error(err.stack)
