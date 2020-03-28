@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "start-db": "node setupDB.js"
+    "load-db": "node ./database/loadDatatoDB.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "moment": "^2.24.0",
     "mysql": "^2.18.1"
   },
   "devDependencies": {

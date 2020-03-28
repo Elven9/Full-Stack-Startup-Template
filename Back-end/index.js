@@ -1,19 +1,19 @@
 const express = require("express")
-const mysql = require("mysql")
 
-// Mysql Setting
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "ekick4sl3",
-  port: "3306",
-  database: "avl"
-})
+// Import Router
+const Restaurant = require('./router/Restaurant')
 
 // App Setting
 const app = express()
 const port = 9000
 
-app.get('/', (req, res) => res.send('Hello World!'))
+// Mount Router
+app.use('/restaurant', Restaurant)
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// Error Handler
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send(err.message)
+})
+
+app.listen(port, () => console.log(`Server listening on port ${port}!`))
