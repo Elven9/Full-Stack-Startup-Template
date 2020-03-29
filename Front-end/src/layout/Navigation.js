@@ -25,6 +25,7 @@ function Navigation({ path, onChange }) {
       <BottomNavigation
         value={path}
         onChange={(_, newValue) => {
+          if (newValue === path) return
           onChange(newValue)
           history.push(newValue)
         }}
