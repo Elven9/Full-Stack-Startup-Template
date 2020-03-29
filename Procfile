@@ -1,1 +1,1 @@
-web: node ./Front-end/server.js
+web: npm run start
