@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: $full-screen-background;
+  min-width: 320px;
 }
 
 @media only screen and (min-width: $max-app-container-width + 1) {

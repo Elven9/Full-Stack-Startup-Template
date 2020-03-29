@@ -7,7 +7,7 @@ import { Route, Switch } from 'react-router-dom'
 import Restaurant from '../pages/Restaurant'
 
 // styles
-import styles from './InfoPanel.module.scss'
+import styles from './RouteContainer.module.scss'
 
 class RouteContainer extends React.Component {
   render() {

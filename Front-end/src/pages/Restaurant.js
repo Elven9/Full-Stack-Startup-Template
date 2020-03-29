@@ -1,9 +1,12 @@
 import React from 'react'
 
+import styles from './Restaurant.module.scss'
+
 class Restaurant extends React.Component {
   render() {
     return (
-      <div>fsdafas</div>
+      <div className={styles.container}>
+      </div>
     )
   }
 }

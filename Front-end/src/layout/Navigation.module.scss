@@ -1,10 +1,14 @@
 @import '../style/global.scss';
 
+$small-device-minor-bp: 414px;
+$tab-amount: 2;
+
 .container {
   width: 100%;
   background-color: $semi-dark-background;
   display: flex;
   flex-direction: column;
+  max-height: $navigation-max-height;
 
   h1 {
     margin: 30px 15px 30px 20px;
@@ -27,10 +31,22 @@
   }
 }
 
-@media only screen and (max-width: $max-app-container-width) {
+@media only screen and (min-width: $small-device-minor-bp) {
+  .container {
+    .bottom-navigation {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-device-minor-bp) {
   .container {
     .bottom-navigation {
       justify-content: space-evenly;
+
+      .custom-root {
+        max-width: 100% / $tab-amount;
+      }
     }
   }
 }

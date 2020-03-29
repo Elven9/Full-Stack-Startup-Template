@@ -21,7 +21,7 @@ function Navigation({ path, onChange }) {
 
   return (
     <div className={styles.container}>
-      <h1>AVL Takehome Test</h1>
+      <h1>餐廳營業系統</h1>
       <BottomNavigation
         value={path}
         onChange={(_, newValue) => {

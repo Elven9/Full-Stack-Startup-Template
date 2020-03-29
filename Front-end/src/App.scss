@@ -21,5 +21,6 @@ $max-app-container-height: 700px;
     height: 90vh;
     max-height: $max-app-container-height;
     border-radius: 30px;
+    overflow: hidden;
   }
 }

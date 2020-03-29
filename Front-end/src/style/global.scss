@@ -18,3 +18,14 @@ $font-secondary-color: rgb(153, 155, 157);
 // RWD Setting
 // Main Breakpoint
 $max-app-container-width: 1080px;
+
+// App Container Global Variable
+$app-border-radius: 30px;
+
+// Navigation
+$navigation-max-height: 149px;
+
+// Mixin
+@mixin page-container {
+  margin-bottom: $app-border-radius;
+}
