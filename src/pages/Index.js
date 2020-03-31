@@ -1,8 +1,8 @@
 import React from 'react'
 
-import styles from './Restaurant.module.scss'
+import styles from './Index.module.scss'
 
-class Restaurant extends React.Component {
+class Index extends React.Component {
   render() {
     return (
       <div className={styles.container}>
@@ -11,4 +11,4 @@ class Restaurant extends React.Component {
   }
 }
 
-export default Restaurant
+export default Index
