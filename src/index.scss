@@ -11,12 +11,3 @@ body {
   background-color: $full-screen-background;
   min-width: 320px;
 }
-
-@media only screen and (min-width: $max-app-container-width + 1) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-}

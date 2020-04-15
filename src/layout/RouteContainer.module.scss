@@ -1,16 +1,23 @@
 @import '../style/global.scss';
 @import '../style/browserCompatibility.scss';
 
+$route-select-width: 320px;
+
 .container {
   width: 100%;
-}
 
-@media only screen and (min-width: $max-app-container-width + 1) {
-  .container {
+  display: flex;
+  flex-direction: row;
+
+  .route-selector {
+    width: 300px;
+    background-color: $box-background;
+  }
+
+  .route-container {
     @include hideScrollBar();
-    height: calc(100% - #{$navigation-max-height});
-    overflow: hidden;
+    width: calc(100% - #{$route-select-width});
+    height: 100vh;
     overflow-y: scroll;
-    overflow-x: hidden;
   }
 }

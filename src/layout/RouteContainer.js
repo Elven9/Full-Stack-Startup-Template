@@ -3,24 +3,34 @@ import React from 'react'
 // react-router-dom
 import { Route, Switch } from 'react-router-dom'
 
-// pages
-import Index from '../pages/Index'
+// components
+import Navigator from './Navigator'
+
+// Import Route
+import routeList from '../router'
 
 // styles
 import styles from './RouteContainer.module.scss'
 
-class RouteContainer extends React.Component {
-  render() {
-    return (
-      <div className={styles.container}>
+function RouteContainer(props) {
+  return (
+    <div className={styles.container}>
+      <div className={styles['route-selector']}>
+        <Navigator />
+      </div>
+      <div className={styles['route-container']}>
         <Switch>
-          <Route exact path="/">
-            <Index />
-          </Route>
+          {
+            routeList.map(route => (
+              <Route exact path={route.path} key={route.path}>
+                {route.component}
+              </Route>
+            ))
+          }
         </Switch>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default RouteContainer
