@@ -28,7 +28,7 @@ function Navigator(props) {
             selected={ route.path === location.pathname }
             classes={{ root: styles['list-item-root'], selected: styles['list-item-selected'] }}
             key={route.path}
-            onClick={() => { history.push(route.path) }}
+            onClick={() => { if ( location.pathname !== route.path ) history.push(route.path) }}
           >
             <ListItemIcon classes={{ root: styles['list-icon']}}>
               { route.icon }
