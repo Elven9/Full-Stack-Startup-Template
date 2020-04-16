@@ -22,20 +22,23 @@ function Navigator(props) {
   return (
     <List component="nav" className={styles['container']}>
       {
-        routeList.map(route => (
-          <ListItem
-            button
-            selected={ route.path === location.pathname }
-            classes={{ root: styles['list-item-root'], selected: styles['list-item-selected'] }}
-            key={route.path}
-            onClick={() => { if ( location.pathname !== route.path ) history.push(route.path) }}
-          >
-            <ListItemIcon classes={{ root: styles['list-icon']}}>
-              { route.icon }
-            </ListItemIcon>
-            <ListItemText primary={route.name} />
-          </ListItem>
-        ))
+        routeList.map(route => {
+          if (route.name === "") return null
+          return (
+            <ListItem
+              button
+              selected={ route.path === location.pathname }
+              classes={{ root: styles['list-item-root'], selected: styles['list-item-selected'] }}
+              key={route.path}
+              onClick={() => { if ( location.pathname !== route.path ) history.push(route.path) }}
+            >
+              <ListItemIcon classes={{ root: styles['list-icon']}}>
+                { route.icon }
+              </ListItemIcon>
+              <ListItemText primary={route.name} />
+            </ListItem>
+          )
+        })
       }
     </List>
   )
